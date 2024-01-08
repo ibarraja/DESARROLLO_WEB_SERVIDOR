@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Formulario2</h1>
+    </header>
+    <main>
+        <!-- <form action="recibe_datos.php" method="get"> Este método nunca debemos de hacerlo -->
+        <form action="recibe_datos3.php" method="post">
+            <p>Nombre: <input type="text" name="nombre"></p>
+            <p>Edad: <input type="text" name="edad"></p>
+            <p>Curso:
+                <input type="radio" name="curso" value="1">1º
+                <input type="radio" name="curso" value="2">2º
+            </p>
+            <p><input type="submit" value="Enviar"></p>
+        </form>
+    </main>
+    <footer>
+        <hr>
+        <p>Autor: @JIM</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario socios</title>
+    <link rel="stylesheet" href="./CSS/estilosFormularios.css">
+</head>
+<body>
+    <header>
+        <h1>
+            RITMO: TU CLUB DE JOGGING
+        </h1>
+    </header>
+    <main>
+        <h3>Hazte socio ahora del super exclusivo club de jogging</h3>
+        <form action="#" method="get" class="haztesocio">
+            <p>Los campos marcados con * son obligatorios</p>
+            <fieldset class="datos_personales">
+                <legend>Datos personales y de contacto</legend>
+                <p>Nombre *</p>
+                <input type="text" name="nombre" size="70px" required>
+                <p>Apellidos *</p>
+                <input type="text" name="apellidos" size="70px" required>
+                <p>Correo electónico *</p>
+                <input type="email" name="mail" size="70px" placeholder="tu email" required>
+                <p>Fecha nacimiento *</p>
+                <input type="date" name="fecha nacimiento" size="70px" required>
+            </fieldset>
+            <br>
+            <fieldset class="datos_login">
+                <legend>Datos de login</legend>
+                <p>Usuario *</p>
+                <input type="text" name="usuario" size="70px" required>
+                <p>Contraseña *</p>
+                <input type="password" name="contraseña" size="70" required>
+                <p>Repetir contraseña *</p>
+                <input type="password" name="contraseña" size="70" required>
+            </fieldset>
+            <br>
+            <fieldset class="tipo_cuota">
+                <legend>Tipo de cuota *</legend>
+                <p><input type="radio" id="mensual" name="cuota" checked> Mensual (30€)</p>
+                <p><input type="radio" id="trimestral" name="cuota"> Trimestral (45€)</p>
+                <p><input type="radio" id="anual" name="cuota"> Anual (100€)</p>
+            </fieldset>
+
+            <br>
+
+            <fieldset class="Otras informaciones">
+                <p>¿Por qué estas interesado en hacerte socio?</p>
+                <textarea name="interes" id="" cols="70" rows="8"></textarea>
+                <p>¿Por qué medio nos has conocido?</p>
+                <select name="medio" id="1">
+                    <option value="" hidden disabled>Seleciona una opción</option>
+                    <option value="x">X</option>
+                    <option value="Facebook">Facebook</option>
+                    <option value="tuenti">Tuenti</option>
+                    <option value="amistades">Amistades</option>
+                </select>
+                <p>Indica otros intereses:</p>
+                <p>
+                    <input type="checkbox" name="intereses" id="natacion">Natación
+                    <input type="checkbox" name="intereses" id="senderismo">Senderismo
+                    <input type="checkbox" name="intereses" id="ciclismo">Senderismo
+
+                </p>
+            </fieldset>
+            <p>INFORMACION SOBRE PROTECCIÓN DE DATOS DE <strong>RITMO. Finalidades</strong> recogida de datos para la inscipción como socio interesado. <striong>Legimitación:</striong> Consentimiento del interesado. <strong>Destinatarios:</strong> No están previstas cesiones de datos a terceros, excepto obligación legal. <strong>Derechos: </strong>Puede retirar su consentimiento en cualquier momento, así como acceder, rectificar, suprimir sus datos y otros derechos dirigiéndose a info@ritmo.org. <strong>Información Adicional: </strong>Puede ampliar la información en el enlace de Aviso Legal y Política de Privacidad.</p>
+            <p>
+                <input type="checkbox" required> He leído y acepto la política de privacidad *
+            </p>
+            <button type="submit" name="enviar">Enviar</button>
+        </form>
+    </main>
+    
+</body>
+</html>

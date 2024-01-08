@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alta</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="login">
+        <h1>Alta Básico</h1>
+
+        <form action="autenticacion.php" method="post">
+            <label for="nombre">
+                <i class="fas fa-user"></i>
+            </label>
+            <input type="text" name="nombre" placeholder="Nombre" id="nombre" >
+            <label for="apellido">
+                <i class="fas fa-user"></i>
+            </label>
+            <input type="text" name="apellido" placeholder="Apellidos" id="apellido" >
+            
+            <label for="phone">
+                <i class="fas fa-phone"></i>
+            </label>
+            <input type="text" name="phone" placeholder="Telefono" id="phone">
+            
+            <label for="email">
+                <i class="fas fa-at"></i>
+            </label>
+            <input type="text" name="email" placeholder="Email*" id="username" required>
+
+            <label for="password">
+                <i class="fas fa-lock"></i>
+            </label>
+            <input type="password" name="password"
+            placeholder="Contraseña*" id="password" required>
+            
+            
+            <label for="image">
+                <i class="fas fa-image"></i>
+            </label>
+            <input type="file" name="file" id="file">
+            <label for="file">Elije un archivo</label>
+
+            <input type="submit" value="Acceder">
+        </form>
+    </div>
+    
+</body>
+</html>

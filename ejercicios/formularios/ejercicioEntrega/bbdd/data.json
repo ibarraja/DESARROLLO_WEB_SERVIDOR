@@ -1,0 +1,37 @@
+[
+    {
+        "nombre": "Javier",
+        "apellidos": "Ibarra",
+        "email": "javier@gmail.com",
+        "password": "javier",
+        "imagen": "./modules/default.png"
+    },
+    {
+        "nombre": "jave",
+        "apellidos": "se",
+        "email": "jave@gmail.com",
+        "password": "jave",
+        "imagen": null
+    },
+    {
+        "nombre": "lola",
+        "apellidos": "lola",
+        "email": "lola@gmail.com",
+        "password": "lola",
+        "imagen": null
+    },
+    {
+        "nombre": null,
+        "apellidos": null,
+        "email": "jaja@gmail.com",
+        "password": "jaja",
+        "imagen": null
+    },
+    {
+        "nombre": "Fran",
+        "apellidos": "Casas",
+        "email": "fran@casas.com",
+        "password": "fran",
+        "imagen": null
+    }
+]
