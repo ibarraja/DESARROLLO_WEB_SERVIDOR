@@ -75,5 +75,12 @@
         "email": "pedro@gma.com",
         "password": "1234",
         "imagen": "default.png"
+    },
+    {
+        "nombre": "Daniel",
+        "apellidos": "Mu\u00f1oz Galdos",
+        "email": "dinieh@gema.com",
+        "password": "Firulais",
+        "imagen": "default.png"
     }
 ]

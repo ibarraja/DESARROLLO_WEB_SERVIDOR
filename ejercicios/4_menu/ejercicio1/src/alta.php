@@ -1,4 +1,5 @@
 <?php
+require_once('modelo.php');
 session_start();
 
 if(isset($_SESSION['errorEmail'])){
@@ -7,10 +8,6 @@ if(isset($_SESSION['errorEmail'])){
 
 if(isset($_SESSION['errorPassword'])){
     $errorPassword = $_SESSION['errorPassword'];
-}
-
-if(isset($_SESSION['errorFichero'])){
-    $errorFichero = $_SESSION['errorFichero'];
 }
 
 if(isset($_SESSION['dataOK'])){
@@ -52,6 +49,9 @@ include './footer.html';
                     <td colspan="2"><input type="password" name="password" placeholder="Contraseña*" value="<?php echo !empty($_SESSION['usuario']) ? $_SESSION["usuario"]["password"] : ''; ?>" required></td>
                 </tr>
                 <tr>
+                    <td colspan="2"><input type="password" name="password2" placeholder="Repite Contraseña*" value="<?php echo !empty($_SESSION['usuario']) ? $_SESSION["usuario"]["password"] : ''; ?>" required></td>
+                </tr>
+                <tr>
                     <td><label for="fichero">Foto de Perfil (max 1 MB):</label></td>
                     <td><input type="file" name="fichero" id="fichero"></td>
                 </tr>
@@ -62,7 +62,21 @@ include './footer.html';
                     </td>
                 </tr>
             </table>
-            <!-- <label for="nombre">Nombre:</label> -->
+            <?php
+            if(isset($errorEmail)){
+                print "<p class='error'>$errorEmail</p>";
+            }
+            if(isset($errorPassword)){
+                print "<p class='error'>$errorPassword</p>";  
+            }
+
+            
+
+            if(isset($dataOK) && $dataOK==true){
+                print "<p class='exito'>Alta de usuario correcta</p>";
+                unset($_SESSION['dataOK']);
+            }
+            ?>
         </form>
 
     </div>

@@ -2,8 +2,8 @@
     {
         "nombre": "Javier",
         "apellidos": "Ibarra",
-        "email": "jacier@gma.com",
-        "password": "1234",
+        "email": "javier@gma.com",
+        "password": "hola",
         "imagen": "default.png"
     },
     {
@@ -11,6 +11,34 @@
         "apellidos": "Mu\u00f1oz",
         "email": "lola#@gma.com",
         "password": "124",
-        "imagen": "default1.png"
+        "imagen": "default.png"
+    },
+    {
+        "nombre": "Jose",
+        "apellidos": "Antonio",
+        "email": "jose@yop.com",
+        "password": "123",
+        "imagen": "default.png"
+    },
+    {
+        "nombre": "Joma",
+        "apellidos": "Gil",
+        "email": "joma@sd.com",
+        "password": "124",
+        "imagen": "default.png"
+    },
+    {
+        "nombre": "Juan",
+        "apellidos": "Garc\u00eda",
+        "email": "juan@yopmail.com",
+        "password": "1234",
+        "imagen": "default.png"
+    },
+    {
+        "nombre": "Melania",
+        "apellidos": "Pelegr\u00edn",
+        "email": "mps@gmail.com",
+        "password": "holi",
+        "imagen": "1234.png"
     }
 ]

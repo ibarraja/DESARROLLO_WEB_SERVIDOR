@@ -2,8 +2,8 @@
 
 session_start();
 
-require_once('modelo.php');
-require_once('funciones.php');
+require_once('./modelo.php');
+require_once('./funciones.php');
 
 
 // print "<pre>";
