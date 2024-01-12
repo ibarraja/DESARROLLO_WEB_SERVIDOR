@@ -1,0 +1,16 @@
+[
+    {
+        "nombre": "Javier",
+        "apellidos": "Ibarra",
+        "email": "jacier@gma.com",
+        "password": "1234",
+        "imagen": "default.png"
+    },
+    {
+        "nombre": "Lola",
+        "apellidos": "Mu\u00f1oz",
+        "email": "lola#@gma.com",
+        "password": "124",
+        "imagen": "default1.png"
+    }
+]

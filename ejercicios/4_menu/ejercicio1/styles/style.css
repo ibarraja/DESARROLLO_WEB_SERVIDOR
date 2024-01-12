@@ -1,0 +1,106 @@
+:root{
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+body{
+    height: 100vh;
+    display: grid;
+    grid-template-rows: auto auto 1fr auto;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    color: white ;
+    text-transform: uppercase;
+    background: #319190;
+    font-size: 2rem;
+    padding: 1rem;
+    text-align: center;
+}
+
+nav{
+    background: #ffc803;
+
+    & ul li{
+        padding-top: 0.8rem;
+        padding-bottom: 0.8rem;
+    }
+
+    & ul li.left {
+        float: left;
+        padding-left: 1rem;      
+    }
+
+    & ul li.right {
+        float: right;  
+        padding-right: 1rem;    
+    }
+
+
+
+    ul, li, a {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        text-decoration: none;
+        color: #260d0d;
+    }
+      
+}
+
+main{
+    padding: 2rem;
+    grid-row-start:3;
+    background: #ffefb5;
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+}
+
+footer{
+    color: #ffefb5;
+    background: #ff4000;
+    padding: 1.3rem;
+    
+    & .editor{
+        padding-bottom: 1rem;
+        font-weight: bold;
+    }
+
+    & .subject{
+        text-transform: capitalize;
+    }
+}
+.formulario{
+    padding: 2rem;
+    border: #319190 solid 0.2rem;
+}
+tr{
+    text-align: center;
+    font-size: 0.7rem;
+}
+
+td{
+    padding-top: 1rem;
+
+
+}
+.botonSubmit{
+    margin: 0;
+    padding: 0.8rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    color: white;
+    background: #000;
+    border: none;
+    font: inherit;
+    
+    background-color: #319190;
+    cursor: pointer;
+}
