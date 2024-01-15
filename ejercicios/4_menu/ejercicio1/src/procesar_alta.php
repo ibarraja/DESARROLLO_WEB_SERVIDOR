@@ -70,10 +70,16 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
         $usuario -> nombre = $nombre;
         $usuario -> apellidos = $apellidos;
         $usuario -> email = $email;
-        $usuario -> password = $password;
+
+            //codificación de contraseña:
+        $passwordHash = password_hash($password, PASSWORD_DEFAULT);
+        $usuario -> password = $passwordHash;
+            
+            //registar Imagen:
         if ($_FILES["fichero"]["error"] == UPLOAD_ERR_OK) {
             $usuario->imagen = $nombreFichero;
         }
+
 
         //Recuperación lista usuarios:
         $listaUsuarios = [];
@@ -88,6 +94,11 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
         //Sobreescribir el data.json:
         $jsonActualizado = json_encode($listaUsuarios, JSON_PRETTY_PRINT);
         file_put_contents($file, $jsonActualizado);
+
+        //Creación de Cookies:
+        setcookie("ultimo_usuario", $usuario->email, time() + 3600*24*10, '/');
+        $fechaYHora = date("d-m-y H:i:s");
+        setcookie("ultimo_usuario_fecha", $fechaYHora, time() + 3600*24*10, '/');
 
         unset($_SESSION['usuario']);
     }

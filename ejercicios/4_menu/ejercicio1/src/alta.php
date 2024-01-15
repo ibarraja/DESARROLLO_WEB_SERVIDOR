@@ -17,7 +17,7 @@ if(isset($_SESSION['dataOK'])){
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -49,7 +49,7 @@ include './footer.html';
                     <td colspan="2"><input type="password" name="password" placeholder="Contraseña*" value="<?php echo !empty($_SESSION['usuario']) ? $_SESSION["usuario"]["password"] : ''; ?>" required></td>
                 </tr>
                 <tr>
-                    <td colspan="2"><input type="password" name="password2" placeholder="Repite Contraseña*" value="<?php echo !empty($_SESSION['usuario']) ? $_SESSION["usuario"]["password"] : ''; ?>" required></td>
+                    <td colspan="2"><input type="password" name="password2" placeholder="Repite Contraseña*" value="<?php echo !empty($_SESSION['usuario']) ? $_SESSION["usuario"]["password2"] : ''; ?>" required></td>
                 </tr>
                 <tr>
                     <td><label for="fichero">Foto de Perfil (max 1 MB):</label></td>

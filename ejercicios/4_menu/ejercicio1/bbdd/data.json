@@ -40,5 +40,33 @@
         "email": "mps@gmail.com",
         "password": "holi",
         "imagen": "1234.png"
+    },
+    {
+        "nombre": "Adrian",
+        "apellidos": "Garcia",
+        "email": "adri@gma.com",
+        "password": "1234",
+        "imagen": "default.png"
+    },
+    {
+        "nombre": "Alvaro",
+        "apellidos": "Navarro",
+        "email": "alavaro@gma.com",
+        "password": "$2y$10$hnD.dVObDWD.OCCIuSh6k.ngO\/9cu1LIgWjWBiiWfGnpouspp4xPO",
+        "imagen": "default.png"
+    },
+    {
+        "nombre": "Alvaro",
+        "apellidos": "Navarro",
+        "email": "alavaro1@gma.com",
+        "password": "$2y$10$yaYmswmODf3l1YmymcXCiOSU95ZHeFYKdT.Aqh6A\/xyccW0jS4apK",
+        "imagen": "default.png"
+    },
+    {
+        "nombre": "javier2",
+        "apellidos": "da",
+        "email": "javier2@gma.com",
+        "password": "$2y$10$2fTDVHbZjPF6758j5VLcE.aQXhvSXOyA6.Q7o0wvp9Fa9N\/Y6h8me",
+        "imagen": "default.png"
     }
 ]
