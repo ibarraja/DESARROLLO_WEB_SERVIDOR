@@ -1,6 +1,6 @@
 <nav>
     <ul>
-        <li class="left"><a href="indexH.php">Home</a></li>
+        <li class="left"><a href="index.php">Home</a></li>
         <li class="left"><a href="alta.php">Alta</a></li>
 
         <?php
