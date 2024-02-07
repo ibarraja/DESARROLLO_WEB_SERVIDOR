@@ -68,19 +68,5 @@
         "email": "javier2@gma.com",
         "password": "$2y$10$2fTDVHbZjPF6758j5VLcE.aQXhvSXOyA6.Q7o0wvp9Fa9N\/Y6h8me",
         "imagen": "default.png"
-    },
-    {
-        "nombre": "Jose",
-        "apellidos": "Jos",
-        "email": "josejos@kk.com",
-        "password": "$2y$10$sH6uT77pvPs0MF\/whkn8Lu9LER\/.Efh..9HnCf2xB.M4kmxfL18Ne",
-        "imagen": "default.png"
-    },
-    {
-        "nombre": "josejos",
-        "apellidos": "josejos",
-        "email": "josejos@kka.com",
-        "password": "$2y$10$ULG06usqqJ.z0Mgx1Tr8P.2wsc.SnJ6ExzpFqIlYQ1dDBiUGwtioG",
-        "imagen": "default.png"
     }
 ]

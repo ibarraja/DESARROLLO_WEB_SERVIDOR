@@ -1,82 +1,87 @@
 <?php
+require_once('modelo.php');
+session_start();
+
+if(isset($_SESSION['errorEmail'])){
+    $errorEmail = $_SESSION['errorEmail'];
+}
+
+if(isset($_SESSION['errorPassword'])){
+    $errorPassword = $_SESSION['errorPassword'];
+}
+
+if(isset($_SESSION['dataOK'])){
+    $dataOK = $_SESSION['dataOK'];
+}
+
 ?>
 
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="estilos.css" title="Color">
-    <title>FORMULARIO 6</title>
+    <title>Document</title>
+    <link rel="stylesheet" href="../styles/style.css">
 </head>
-
 <body>
-    <header>
-        <h1>Ejercicio Sesiones 04 - Formulario de alta</h1>
 
-    </header>
-    <main>
-        <div class="borde">
-            <form action="procesar_alta.php" method="post" enctype="multipart/form-data">
-                <table>
-                    <tr>
-                        <td><label for="nombre">Nombre:</label></td>
-                        <td><input type="text" name="nombre" id="nombre" value="<?php echo !empty($_SESSION['usuario']) ? $_SESSION["usuario"]["nombre"] : ''; ?>"></td>
-                    </tr>
-                    <tr>
-                        <td><label for="apellidos">Apellidos:</label></td>
-                        <td><input type="text" name="apellidos" id="apellidos" value="<?php echo !empty($_SESSION['usuario']) ? $_SESSION["usuario"]["apellidos"] : ''; ?>"></td>
-                    </tr>
-                    <tr>
-                        <td><label for="email">* Email@:</label></td>
-                        <td><input type="text" name="email" id="email" value="<?php echo !empty($_SESSION['usuario']) ? $_SESSION["usuario"]["email"] : ''; ?>" required></td>
-                    </tr>
-                    <tr>
-                        <td><label for="password">* Contraseña:</label></td>
-                        <td><input type="text" name="password" id="password" value="<?php echo !empty($_SESSION['usuario']) ? $_SESSION["usuario"]["password"] : ''; ?>" required></td>
-                    </tr>
-                    <tr>
-                        <td><label for="password2">* Repita contraseña:</label></td>
-                        <td><input type="text" name="password2" id="password2" value="<?php echo !empty($_SESSION['usuario']) ? $_SESSION["usuario"]["password2"] : ''; ?>" required></td>
-                    </tr>
-                    <tr>
-                        <td><label for="fichero">Foto de Perfil (max 1 MB):</label></td>
-                        <td> <input type="file" name="fichero" id="fichero"></td>
-                    </tr>
-                </table>
+<?php
+include './header.html';
+include './menu.php';
+include './footer.html';
+?>
+<main>
+    <div class="formulario">
+        Alta de usuario:
+        <form action="procesar_alta.php" method="post" enctype="multipart/form-data">
+            <table>
+                <tr>
+                    <td colspan="2"><input type="text" name="nombre" placeholder="Nombre" value="<?php echo !empty($_SESSION['usuario']) ? $_SESSION["usuario"]["nombre"] : ''; ?>"></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input type="text" name="apellidos" placeholder="Apellidos" value="<?php echo !empty($_SESSION['usuario']) ? $_SESSION['usuario']['apellidos'] : '';?>"></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input type="email" name="email" placeholder="Correo Electrónico*" value="<?php echo !empty($_SESSION['usuario']) ? $_SESSION["usuario"]["email"] : ''; ?>" required></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input type="password" name="password" placeholder="Contraseña*" value="<?php echo !empty($_SESSION['usuario']) ? $_SESSION["usuario"]["password"] : ''; ?>" required></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input type="password" name="password2" placeholder="Repite Contraseña*" value="<?php echo !empty($_SESSION['usuario']) ? $_SESSION["usuario"]["password2"] : ''; ?>" required></td>
+                </tr>
+                <tr>
+                    <td><label for="fichero">Foto de Perfil (max 1 MB):</label></td>
+                    <td><input type="file" name="fichero" id="fichero"></td>
+                </tr>
 
-                <p><button type="submit" name="submit" value="alta">Alta de nuevo usuario</button></p>
-                <p>* Campos obligatorios</p>
+                <tr>
+                    <td colspan="2" style="align-items='center'">
+                        <p><button class="botonSubmit" type="submit" name="submit" value="alta">Alta de nuevo usuario</button></p>
+                    </td>
+                </tr>
+            </table>
+            <?php
+            if(isset($errorEmail)){
+                print "<p class='error'>$errorEmail</p>";
+            }
+            if(isset($errorPassword)){
+                print "<p class='error'>$errorPassword</p>";  
+            }
 
-            </form>
-        </div>
+            
 
-        <?php
-        if (isset($errorEmail)) {
-            print "<p class='error'>$errorEmail</p>";
-        }
-        if (isset($errorPassword)) {
-            print "<p class='error'>$errorPassword</p>";
-        }
-        if (isset($errorFichero)) {
-            print "<p class='error'>$errorFichero</p>";
-        }
+            if(isset($dataOK) && $dataOK==true){
+                print "<p class='exito'>Alta de usuario correcta</p>";
+                unset($_SESSION['dataOK']);
+            }
+            ?>
+        </form>
 
-        if (isset($datosOK) && $datosOK == true) {
-            print "<p class='exito fade-in-out'>Alta de usuario correcta</p>";
-            unset($_SESSION["datosOK"]); //limpiamos por si intentamos recargar
-            //que no vuelva a aparecer el mensaje
-        }
+    </div>
 
-        ?>
-
-
-    </main>
-    <footer>
-        <hr>
-        <p>Autor: Juan Antonio Cuello</p>
-    </footer>
+</main>
+    
 </body>
-
 </html>

@@ -52,7 +52,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
         //Imagen:
     if ($_FILES['fichero']['error'] == UPLOAD_ERR_OK) {
         $nombreFichero = $_FILES['fichero']['name'];
-        $uploadDir = '../bbdd/';
+        $uploadDir = './bbdd/';
         $uploadedFile = $uploadDir . basename($nombreFichero);
     
         if (move_uploaded_file($_FILES['fichero']['tmp_name'], $uploadedFile . $_FILES['fichero']['name'])) {
@@ -83,7 +83,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
         //Recuperación lista usuarios:
         $listaUsuarios = [];
-        $file = '../bbdd/data.json';
+        $file = './bbdd/data.json';
 
         $jsonData = file_get_contents("./{$file}");
         $listaUsuarios = json_decode($jsonData);

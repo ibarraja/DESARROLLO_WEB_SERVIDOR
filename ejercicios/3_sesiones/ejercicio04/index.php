@@ -9,7 +9,7 @@ session_start();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="../styles/style.css">
 </head>
 <body>
 
@@ -25,7 +25,7 @@ include './footer.html';
 
     $file = 'data.json';
 
-    $jsonData = file_get_contents("./bbdd/{$file}");
+    $jsonData = file_get_contents("../bbdd/{$file}");
     $listaUsuarios = json_decode($jsonData);
 
     print "<div class='indice'><p>Total de usuarios: <strong>" . count($listaUsuarios) . "</strong></p>";

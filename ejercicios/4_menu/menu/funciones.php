@@ -13,7 +13,7 @@ function comprobar($email, $pass){
 
     //Recuperar la lista de usuarios:
     $lista_usuarios = [];
-    $file = '../bbdd/data.json';
+    $file = './bbdd/data.json';
 
     $jsonData = file_get_contents("./{$file}", FILE_USE_INCLUDE_PATH);
     $lista_usuarios = json_decode($jsonData);
@@ -42,7 +42,7 @@ function comprobar($email, $pass){
 function usuarioExistente($email){
     //Recuperar la lista de usuarios:
     $lista_usuarios = [];
-    $file = '../bbdd/data.json';
+    $file = './bbdd/data.json';
 
     $jsonData = file_get_contents("./{$file}", FILE_USE_INCLUDE_PATH);
     $lista_usuarios = json_decode($jsonData);
